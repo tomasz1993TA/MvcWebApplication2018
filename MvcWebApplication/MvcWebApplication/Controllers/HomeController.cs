@@ -26,5 +26,12 @@ namespace MvcWebApplication.Controllers
 
             return View();
         }
+
+        public ActionResult Users()
+        {
+            ViewBag.Message = "There is the list of users.";
+
+            return View();
+        }
     }
 }
