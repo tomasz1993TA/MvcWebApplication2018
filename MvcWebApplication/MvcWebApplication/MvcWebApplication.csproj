@@ -208,8 +208,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UsersDBModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UsersDBModel.cs" />
+    </Compile>    
     <Compile Include="Models\UsersDBModel.Designer.cs">
       <DependentUpon>UsersDBModel.edmx</DependentUpon>
       <AutoGen>True</AutoGen>
