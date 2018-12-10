@@ -11,7 +11,8 @@ namespace MvcWebApplication.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class AspNetUser
     {
         public string Id { get; set; }
@@ -19,13 +20,16 @@ namespace MvcWebApplication.Models
         public bool EmailConfirmed { get; set; }
         public string PasswordHash { get; set; }
         public string SecurityStamp { get; set; }
+        [DisplayName("Phone number")]
         public string PhoneNumber { get; set; }
         public bool PhoneNumberConfirmed { get; set; }
         public bool TwoFactorEnabled { get; set; }
         public Nullable<System.DateTime> LockoutEndDateUtc { get; set; }
         public bool LockoutEnabled { get; set; }
         public int AccessFailedCount { get; set; }
+        [DisplayName("User name")]
         public string UserName { get; set; }
+        [DisplayName("City name")]
         public string CityName { get; set; }
     }
 }
