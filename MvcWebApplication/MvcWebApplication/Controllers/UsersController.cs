@@ -51,5 +51,17 @@ namespace MvcWebApplication.Controllers
         {
             return View(db.AspNetUsers.Find(Id));
         }
+
+        [HttpPost]
+        public ActionResult Delete(string Id, AspNetUser user)
+        {
+            var currentUser = db.AspNetUsers.Where(u => u.Id == Id).FirstOrDefault();
+
+            db.AspNetUsers.Remove(currentUser);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Users");
+        }
     }
 }
