@@ -208,7 +208,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UsersDBModel.Context.tt</DependentUpon>
-    </Compile>    
+    </Compile>
     <Compile Include="Models\UsersDBModel.Designer.cs">
       <DependentUpon>UsersDBModel.edmx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -298,6 +298,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Users.cshtml" />
     <Content Include="Views\Users\Users.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
