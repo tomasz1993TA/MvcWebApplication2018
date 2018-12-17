@@ -46,5 +46,10 @@ namespace MvcWebApplication.Controllers
         {
             return View(db.AspNetUsers.Find(Id));
         }
+
+        public ActionResult Delete(string Id)
+        {
+            return View(db.AspNetUsers.Find(Id));
+        }
     }
 }
