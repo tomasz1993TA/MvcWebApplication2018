@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcWebApplication.Generators;
 
 namespace MvcWebApplication.Controllers
 {
@@ -67,6 +68,18 @@ namespace MvcWebApplication.Controllers
         public ActionResult Create()
         {            
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(AspNetUser user, IdGenerator id)
+        {
+            user.Id = id.GetId();            
+
+            db.AspNetUsers.Add(user);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Users");
         }
     }
 }
