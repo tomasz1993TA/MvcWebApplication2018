@@ -41,5 +41,10 @@ namespace MvcWebApplication.Controllers
 
             return RedirectToAction("Users");
         }
+
+        public ActionResult Details(string Id)
+        {
+            return View(db.AspNetUsers.Find(Id));
+        }
     }
 }
