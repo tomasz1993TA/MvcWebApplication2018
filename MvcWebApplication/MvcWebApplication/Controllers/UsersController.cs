@@ -63,5 +63,10 @@ namespace MvcWebApplication.Controllers
 
             return RedirectToAction("Users");
         }
+
+        public ActionResult Create()
+        {            
+            return View();
+        }
     }
 }
