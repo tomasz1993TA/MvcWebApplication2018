@@ -15,5 +15,10 @@ namespace MvcWebApplication.Controllers
         {
             return View(db.AspNetUsers.ToList());
         }
+
+        public ActionResult Edit(string Id)
+        {
+            return View(db.AspNetUsers.Where(u => u.Id == Id).FirstOrDefault());
+        }
     }
 }
